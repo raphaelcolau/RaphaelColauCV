@@ -1,0 +1,117 @@
+.desktop-display {
+    --height-top-pos: 49vh;
+    --border-style: var(--line-size) solid var(--color-main);
+
+    width: 100vw;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+    border: var(--border-style);
+    border-bottom: unset;
+}
+
+.frame {
+    content: "";
+    display: block;
+    pointer-events: none;
+
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+
+    box-sizing: border-box;
+    border: var(--border-style);
+}
+
+/*
+ SIDEBAR
+*/
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: var(--line-size);
+
+    width: calc(100vh - calc(var(--line-size) * 2));
+    display: flex;
+    justify-content: space-between;
+    transform-origin: 100% 50%;
+    transform: rotate(-90deg) translate(2%, -70%);
+}
+
+div.sidebar a {
+    font-size: 25px;
+
+    margin: 10px;
+    text-decoration: unset;
+    color: var(--color-main);
+}
+
+div.sidebar a:hover {
+    color: var(--color-third);
+}
+
+/*
+ Main container
+*/
+
+.topleft-container {
+    width: 48vw;
+    max-width: 1000px;
+    height: var(--height-top-pos);
+    clip-path: polygon(0 0, 100% 0%, 74% 100%, 0% 100%);
+
+    background-color: white;
+}
+
+.topleft-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    height: inherit;
+    width: calc(48vw - var(--line-size));
+    max-width: 994px;
+
+    background-color: black;
+    clip-path: polygon(0 0, 100% 0%, 73.85% 100%, 0% 100%);
+    z-index: -1;
+}
+
+.content-container {
+    width: 1500px;
+    height: 2000px;
+
+    position: absolute;
+    left: calc(48vw - 12.35vw);
+    top: var(--height-top-pos);
+
+    transform-origin: top left;
+    transform: rotate(45deg);
+
+    border-top: var(--border-style);
+
+    --split-width-content: 15%;
+}
+
+div.content-container > .left {
+    float: left;
+
+    text-align: center;
+    font-size: 40px;
+
+    height: 100%;
+    width: var(--split-width-content);
+}
+
+div.content-container > .right {
+    height: 100%;
+    width: calc(100% - var(--split-width-content));
+    float: left;
+
+    border-left: var(--border-style);
+    box-sizing: border-box;
+}

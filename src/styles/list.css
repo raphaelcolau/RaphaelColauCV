@@ -1,0 +1,75 @@
+.project-list {
+    width: 100%;
+    height: 40%;
+
+    border-bottom: var(--line-size) solid var(--color-main);
+    box-sizing: border-box;
+}
+
+div.project-list > .list {
+    height: 100%;
+    width: 1vw;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 2%;
+}
+
+.p-element {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 26px;
+    margin-right: 26px;
+
+    border: var(--border-style);
+    background-color: black;
+    cursor: pointer;
+    
+    transition: ease-out 200ms;
+}
+
+.p-element:hover {
+    transform-origin: center;
+    transform: rotate(-45deg) scale(200%);
+
+    border: var(--color-main) solid calc( var(--line-size) / 2);
+    transition: ease-out 200ms;
+    z-index: 1000;
+}
+
+.p-element > .text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+
+    font-size: 21px;
+
+    transform-origin: center;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: ease-out 200ms;
+}
+
+.p-element:hover > .text {
+    margin: 5px;
+    text-align: left;
+    font-size: 15px;
+
+    top: 0;
+    transform: translateY(0%) rotate(0);
+
+    transition: ease-out 200ms;
+}
+
+.p-element > .only-hov {
+    opacity: 0;
+}
+
+.p-element:hover > .only-hov {
+    opacity: 100%;
+}
