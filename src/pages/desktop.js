@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/desktop.css';
 import SideBar from '../components/desktop/sidebar';
-import Projectlist from '../components/desktop/projectlist';
+import Projectlist from '../components/desktop/list';
 
 export default class PageDesktop extends React.Component {
 

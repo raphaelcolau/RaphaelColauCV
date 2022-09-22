@@ -9,13 +9,9 @@ export default function Projectlist() {
                 return(
                     <div className="p-element">
 
-                        <div className="text">
-                            {p.name}
-                        </div>
+                        <div className="text"> {p.name} </div>
 
-                        <div className="description only-hov">
-                            {p.description}
-                        </div>
+                        <div className="description only-hov"> {p.description}</div>
 
                         <div className="stack only-hov">
                             {p.stack.map( techno => {
