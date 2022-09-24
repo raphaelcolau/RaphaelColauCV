@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../styles/list.css';
 
 const projects = require('../../projects.json');
@@ -11,21 +12,21 @@ export default function Projectlist() {
 
                         <div className="text"> {p.name} </div>
 
-                        <div className="description only-hov"> {p.description}</div>
+                        <div className="description only-hov" style={{'--order': 1}}> {p.description}</div>
 
-                        <div className="stack only-hov">
-                            {p.stack.map( techno => {
+                        <div className="stack only-hov" style={{'--order': 2}}>
+                            {p.stack.map( (techno, index) => {
                                 return (
-                                    <span>
+                                    <span key={techno} style={{'--order-stack': index}}>
                                         {techno}
                                     </span>
                                 )
                             })}
                         </div>
 
-                        <div className="bottom-bar only-hov">
+                        <div className="bottom-bar only-hov" style={{'--order': 3}}>
                             {p.src ?
-                                <a href={p.url} rel="noreferrer" target="_blank">
+                                <a href={p.src} rel="noreferrer" target="_blank">
                                     SRC
                                 </a>
                             : <></>}

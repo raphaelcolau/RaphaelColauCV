@@ -24,11 +24,13 @@ div.project-list > .list {
     height: 160px;
     margin-bottom: 26px;
     margin-right: 26px;
+    overflow: hidden;
 
     border: var(--border-style);
     background-color: black;
     cursor: pointer;
-    
+
+    z-index: 1;
     transition: ease-out 200ms;
 }
 
@@ -39,6 +41,11 @@ div.project-list > .list {
     border: var(--color-main) solid calc( var(--line-size) / 2);
     transition: ease-out 200ms;
     z-index: 1000;
+}
+
+.project-list:has(.p-element:hover) .p-element:not(:hover) {
+    z-index: 0;
+    scale: 0.9;
 }
 
 .p-element > .text {
@@ -68,8 +75,66 @@ div.project-list > .list {
 
 .p-element > .only-hov {
     opacity: 0;
+    transform: translate(-100px, 0px);
 }
 
 .p-element:hover > .only-hov {
     opacity: 100%;
+    transform: translate(0, 0);
+    transition: cubic-bezier(.46,.64,.42,1.18) calc(500ms * var(--order));
+}
+
+.p-element .description {
+    margin: 6px;
+    font-size: 10px;
+}
+
+.p-element .stack {
+    margin: 6px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stack {
+    padding-top: 70px;
+    border-bottom: var(--color-main) solid calc( var(--line-size) / 2);
+}
+
+.stack > span {
+    /* display: list-item;
+    list-style-type: square; 
+    list-style-position: inside;    */
+    font-size: 7px;
+
+    margin: -5px -10px 0 0;
+    text-align: left;
+
+    opacity: 0;
+    transform-origin: top left;
+    transform: rotate(-45deg);
+}
+
+.stack > span:before {
+    content: "■ "
+}
+
+.p-element:hover span {
+    opacity: 1;
+    transition: opacity calc(900ms * var(--order-stack)) cubic-bezier(1,.27,.31,1);
+}
+
+.p-element > .bottom-bar {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom-bar a {
+    text-decoration: unset;
+    color: var(--color-main);
+    width: 5%;
+    height: 15px;
+    font-size: 13px;
 }

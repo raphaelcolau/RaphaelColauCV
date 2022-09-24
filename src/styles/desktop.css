@@ -3,7 +3,6 @@
     --border-style: var(--line-size) solid var(--color-main);
 
     width: 100vw;
-    min-height: 100vh;
 
     box-sizing: border-box;
     border: var(--border-style);
@@ -94,7 +93,7 @@ div.sidebar a:hover {
 
     border-top: var(--border-style);
 
-    --split-width-content: 15%;
+    --split-width-content: 8%;
 }
 
 div.content-container > .left {
