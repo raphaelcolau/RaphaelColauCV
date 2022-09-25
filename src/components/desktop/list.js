@@ -6,9 +6,9 @@ const projects = require('../../projects.json');
 export default function Projectlist() {
     return (
         <div className="list">
-            {projects.list.map( p => {
+            {projects.list.map( (p, index) => {
                 return(
-                    <div className="p-element">
+                    <div className="p-element" key={index}>
 
                         <div className="text"> {p.name} </div>
 
