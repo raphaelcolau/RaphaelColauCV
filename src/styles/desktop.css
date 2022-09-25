@@ -128,3 +128,12 @@ div.topleft-container > .content {
     padding-top: 60px;
     padding-left: 60px;
 }
+
+div.content > p:not(.title) {
+    margin: 0;
+    font-size: 20px;
+}
+
+p.title {
+    font-size: 25px;
+}
