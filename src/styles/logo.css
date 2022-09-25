@@ -65,14 +65,11 @@
 @keyframes shake {
     0% {
         margin-left: 0;
-        background-size: contain;
     }
     50% {
         margin-left: -25px;
-        background-size: cover;
     }
     100% {
         margin-left: 0;
-        background-size: contain;
     }
 }

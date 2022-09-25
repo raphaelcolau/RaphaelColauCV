@@ -3,9 +3,16 @@ import '../styles/logo.css';
 
 export default function Logo() {
     const [animate, setAnimate] = useState('');
+    const [hasBeenAnimate, setBeenAnimate] = useState(false);
 
     setTimeout(() => {
-        setAnimate('shake')
+        if (!hasBeenAnimate) {
+            setAnimate('shake');
+            setTimeout(() => {
+                setAnimate('');
+            }, 1000);
+        }
+        setBeenAnimate(true);
     }, 5000);
 
     return(
