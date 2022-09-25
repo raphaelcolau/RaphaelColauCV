@@ -1,0 +1,78 @@
+.logo-container {
+    height: 100px;
+    width: 300px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    user-select: none;
+
+    --logo-split-left: 20%;
+    --logo-split-top: 45%;
+}
+
+.logo > .left {
+    width: var(--logo-split-left);
+    height: 100%;
+    float: left;
+
+    background-image: url('./assets/logoc.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1px 2px;
+}
+
+.logo > .top {
+    box-sizing: border-box;
+
+    height: var(--logo-split-top);
+    width: calc(100% - var(--logo-split-left));
+    float: left;
+    overflow: hidden;
+
+    font-size: 41px;
+    letter-spacing: 7.25px;
+    padding-left: 10.3px;
+    padding-top: 6.5px;
+}
+
+.logo > .bottom {
+    box-sizing: border-box;
+
+    overflow: hidden;
+    float: left;
+    height: calc(100% - var(--logo-split-top));
+    width: calc(100% - var(--logo-split-left));
+
+    font-size: 57px;
+    letter-spacing: 12px;
+    padding-left: 10.3px;
+    margin-top: -6px;
+}
+
+.logo:hover span {
+    animation: shake 100ms ease-in-out var(--order);
+}
+
+.shake span {
+    animation: shake 100ms ease-in-out var(--order);
+}
+
+@keyframes shake {
+    0% {
+        margin-left: 0;
+        background-size: contain;
+    }
+    50% {
+        margin-left: -25px;
+        background-size: cover;
+    }
+    100% {
+        margin-left: 0;
+        background-size: contain;
+    }
+}

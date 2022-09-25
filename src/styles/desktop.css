@@ -30,6 +30,8 @@
 */
 
 /* TODO -> Faire en sorte d'avoir le meme design de bouton*/
+/* TODO -> Faire en sorte que les boutons soient tous bien aligné */
+
 .sidebar {
     position: fixed;
     right: 0;
@@ -114,4 +116,15 @@ div.content-container > .right {
 
     border-left: var(--border-style);
     box-sizing: border-box;
+}
+
+/*
+*
+* TOP CONTENT (Logo, description...)
+*
+*/
+
+div.topleft-container > .content {
+    padding-top: 60px;
+    padding-left: 60px;
 }

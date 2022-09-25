@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/desktop.css';
 import SideBar from '../components/desktop/sidebar';
 import Projectlist from '../components/desktop/list';
+import Logo from '../components/logo';
 
 export default class PageDesktop extends React.Component {
 
@@ -11,7 +12,9 @@ export default class PageDesktop extends React.Component {
                 <div className="frame"></div>
                 <div className="topleft-container">
                     <div className="content">
-                        Je suis le content du topleft-container
+                        <div className='logo-container'>
+                            <Logo />
+                        </div>
                     </div>
                 </div>
                 <div className="content-container">
