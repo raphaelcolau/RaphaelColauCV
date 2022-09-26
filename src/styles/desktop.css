@@ -3,6 +3,8 @@
     --border-style: var(--line-size) solid var(--color-main);
 
     width: 100vw;
+    height: 170vh;
+    overflow: hidden;
 
     box-sizing: border-box;
     border: var(--border-style);
@@ -87,8 +89,7 @@ div.sidebar a:hover {
     width: 4000px;
     height: 2000px;
 
-    position: absolute;
-    left: calc(48vw - 12.35vw);
+    translate: calc(48vw - 12.35vw);
     top: var(--height-top-pos);
 
     transform-origin: top left;
