@@ -13,7 +13,7 @@ export default function Logo() {
             }, 1000);
         }
         setBeenAnimate(true);
-    }, 5000);
+    }, 1000);
 
     return(
         <div className="logo">
