@@ -1,10 +1,10 @@
 import React from 'react';
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, Stars } from '@react-three/drei';
 
 function AddMesh() {
     return(
-        <mesh>
+        <mesh position={[0, 1.2, 0]}>
             <boxGeometry attach="geometry" />
             <meshLambertMaterial attach="material" color="white" />
         </mesh>
@@ -18,6 +18,8 @@ export default function Three() {
         }}>
             <Canvas>
                 <OrbitControls />
+                <Stars />
+                <ambientLight intensity={1} />
                 <AddMesh />
             </Canvas>
         </div>

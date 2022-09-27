@@ -73,7 +73,7 @@ div.sidebar a:hover {
 
 .content-bar {
     content: "";
-    width: 30vw;
+    width: 80vh;
     height: 50vw;
     background-color: black;
 
@@ -150,7 +150,7 @@ p.title {
     width: 64vw;
     height: 170vh;
 
-    background-color:  rgba(30, 30, 30, 1);
+    background-color:  rgba(30, 30, 30, 0.1);
 }
 
 /* div.desktop-display > div:not(.frame, .three-container) {
