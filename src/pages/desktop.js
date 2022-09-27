@@ -3,6 +3,7 @@ import '../styles/desktop.css';
 import SideBar from '../components/desktop/sidebar';
 import Projectlist from '../components/desktop/list';
 import Logo from '../components/logo';
+import Three from '../components/desktop/three';
 
 export default class PageDesktop extends React.Component {
     render() {
@@ -10,8 +11,8 @@ export default class PageDesktop extends React.Component {
             <div className="desktop-display">
                 <div className="frame"></div>
                 <div className="topleft-container">
+                        <div className='content-bar'></div>
                     <div className="content">
-
                         <div className='logo-container'>
                             <Logo />
                         </div>
@@ -26,15 +27,21 @@ export default class PageDesktop extends React.Component {
                         
                     </div>
                 </div>
+
+                <Three />
+
                 <div className="content-container">
+
                     <div className="left">
                         My Works
                     </div>
+                
                     <div className="right">
                         <div className="project-list">
                             <Projectlist />
                         </div>
                     </div>
+
                 </div>
                 <SideBar />
             </div>
