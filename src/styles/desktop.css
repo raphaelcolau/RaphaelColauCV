@@ -31,9 +31,6 @@
  SIDEBAR
 */
 
-/* TODO -> Faire en sorte d'avoir le meme design de bouton*/
-/* TODO -> Faire en sorte que les boutons soient tous bien aligné */
-
 .sidebar {
     position: fixed;
     right: var(--line-size);
