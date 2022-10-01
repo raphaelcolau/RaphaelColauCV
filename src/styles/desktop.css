@@ -36,26 +36,78 @@
 
 .sidebar {
     position: fixed;
-    right: 0;
+    right: var(--line-size);
     top: var(--line-size);
+    z-index: 2000;
 
-    width: calc(100vh - calc(var(--line-size) * 2));
+    height: calc(100vh - calc(var(--line-size) * 2));
+    margin-right: 10px;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    transform-origin: 100% 50%;
-    transform: rotate(-90deg) translate(2%, -70%);
+}
+
+div.sidebar div:has(a) {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
 }
 
 div.sidebar a {
     font-size: 25px;
+    position: relative;
 
     margin: 10px;
+    padding: 3px;
     text-decoration: unset;
     color: var(--color-main);
 }
 
-div.sidebar a:hover {
-    color: var(--color-third);
+div.sidebar a::after {
+    content: "";
+    width: 0%;
+    height: 0%;
+
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -1px;
+    opacity: 0;
+
+    border-left: 2px solid var(--color-main);
+    border-bottom: 2px solid var(--color-main);
+    
+    transition: opacity 0ms 200ms, width 200ms ease-in-out, height 200ms ease-in;
+}
+
+div.sidebar a::before {
+    content: "";
+    width: 0%;
+    height: 0%;
+
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: -1px;
+    opacity: 0;
+
+    border-right: 2px solid var(--color-main);
+    border-top: 2px solid var(--color-main);
+    
+    transition: opacity 0ms 200ms, width 200ms ease-in-out, height 200ms ease-in;
+}
+
+div.sidebar a:hover::before, a:hover::after {
+    width: calc(100% - 2px);
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0ms, width 200ms ease-in-out, height 200ms ease-in;
+}
+
+div.sidebar a:hover::after {
+    width: calc(100% - 2px);
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0ms, width 200ms ease-in-out, height 200ms ease-in;
 }
 
 /*
