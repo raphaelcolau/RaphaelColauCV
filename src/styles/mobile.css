@@ -4,7 +4,7 @@
     overflow: hidden;
 
     box-sizing: border-box;
-    border: var(--line-size) solid var(--color-main);
+    border: var(--border-style);
 }
 
 div.mobile-display > .top {
@@ -49,10 +49,55 @@ p.title {
 
 /*
  * 
- * List and Link
+ * Bottom
  *
  */
 
 .mobile-display > .bottom {
     --split-dimension: 5%;
+
+    transform: rotate(-20deg) translate(-7vw, 2vh);
+    width: 110vw;
 }
+
+div.bottom > .link-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.bottom > .content-list {
+    border-top: var(--border-style);
+    width: 100%;
+}
+
+.content-list > .left {
+    float: left;
+    height: 100%;
+    width: var(--split-dimension);
+}
+
+.content-list > .right {
+    float: left;
+    height: 100%;
+    width: var(--split-dimension);
+}
+
+/*
+ * 
+ * Link
+ *
+ */
+
+ .link-bar > .link {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .link-bar > .link a {
+    font-size: 20px;
+    margin-bottom: 3px;
+    text-decoration: none;
+    color: var(--color-main);
+ }
