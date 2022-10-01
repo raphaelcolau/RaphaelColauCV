@@ -7,11 +7,11 @@ import Three from '../components/desktop/three';
 
 export default class PageDesktop extends React.Component {
     render() {
-        return(console.log('Je suis un test'),
+        return(
             <div className="desktop-display">
                 <div className="frame"></div>
                 <div className="topleft-container">
-                        <div className='content-bar'></div>
+                    <div className='content-bar'></div>
                     <div className="content">
                         <div className='logo-container'>
                             <Logo />
