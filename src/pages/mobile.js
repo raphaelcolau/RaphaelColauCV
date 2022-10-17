@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../components/logo';
 import Linkbar from '../components/modile/linkbar';
+import List from '../components/modile/list';
 import '../styles/mobile.css';
 
 export default class PageMobile extends React.Component {
@@ -35,7 +36,10 @@ export default class PageMobile extends React.Component {
                         <Linkbar />
                     </div>
                     <div className='content-list'>
-                        list
+                        <div className='left'>
+                            <List />
+                        </div>
+                        <div className='right' />
                     </div>
                 </div>
 
