@@ -5,6 +5,8 @@ import Projectlist from '../components/desktop/list';
 import Logo from '../components/logo';
 import Three from '../components/desktop/three';
 
+//TODO Changer la flèche de My Works
+
 export default class PageDesktop extends React.Component {
     render() {
         return(
@@ -33,7 +35,7 @@ export default class PageDesktop extends React.Component {
                 <div className="content-container">
 
                     <div className="left">
-                        My Works
+                        My Works →
                     </div>
                 
                     <div className="right">
