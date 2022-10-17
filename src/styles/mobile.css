@@ -4,7 +4,10 @@
 
     box-sizing: border-box;
     border: var(--border-style);
+    overflow: hidden;
 }
+
+.App {overflow: hidden;}
 
 div.mobile-display > .top {
     height: 35vh;
@@ -55,7 +58,7 @@ p.title {
 .mobile-display > .bottom {
     --split-dimension: 50%;
 
-    transform-origin: 50% 0%;
+    transform-origin: 50% 3%;
     transform: rotate(-20deg) translate(-7vw, 2vh);
     width: 110vw;
 }
