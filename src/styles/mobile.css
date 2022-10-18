@@ -122,6 +122,11 @@ div.bottom > .content-list {
     overflow-y: scroll;
  }
 
+
+.dragzone {
+    position: relative;
+}
+
 .m-project-list div.p-element-m {
     height: 100px;
     background-color: var(--color-second);
@@ -139,6 +144,18 @@ div.bottom > .content-list {
     transition: transform ease 300ms;
 }
 
-.dragzone {
-    background-color: green;
+
+.m-under-dragzone {
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    scale: calc(var(--scl) / 100);
+    transition: scale ease 300ms;
+
+    height: 100px;
+    width: 90px;
+    border: var(--border-style);
 }
