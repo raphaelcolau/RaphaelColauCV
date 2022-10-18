@@ -145,7 +145,7 @@ div.bottom > .content-list {
 }
 
 
-.m-under-dragzone {
+.m-btn-dragzone {
     z-index: 0;
     position: absolute;
     display: flex;
@@ -158,4 +158,9 @@ div.bottom > .content-list {
     height: 100px;
     width: 90px;
     border: var(--border-style);
+}
+
+.m-btn-dragzone > .btn-text {
+    padding: auto;
+    user-select: none;
 }

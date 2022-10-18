@@ -2,11 +2,13 @@ import React from 'react';
 import Draggable from 'react-draggable';
 const projects = require('../../projects.json');
 
+//TODO Le scroll dans sur l'axe Y est cassé à cause du component Draggable
+
 export default class List extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            positionX: Array(projects.list.length).fill(50)
+            positionX: Array(projects.list.length).fill(0)
         }
         this.handleStop=this.handleStop.bind(this);
         this.handleDrag=this.handleDrag.bind(this);
@@ -38,8 +40,9 @@ export default class List extends React.Component {
         this.setState({ positionX: [...positionX]})
     }
     
-    openModal() {
-        console.log("Clicked")
+    openModal(n) {
+        console.log("Clicked " + n);
+        console.log(projects.list[n])
     }
 
     render() {
@@ -48,8 +51,8 @@ export default class List extends React.Component {
                 {projects.list.map((p, index) => {
                     return(
                         <div className='dragzone' key={index}>
-                            <div className='m-under-dragzone' style={{'--scl': Number(this.state.positionX[index])}} onClick={() => {this.openModal()}}>
-                                <>MORE INFO</>
+                            <div className='m-btn-dragzone' style={{'--scl': Number(this.state.positionX[index])}} onClick={() => {this.openModal(index)}}>
+                                <p className='btn-text'>MORE INFO</p>
                             </div>
 
                             <Draggable
