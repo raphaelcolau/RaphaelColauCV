@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import PageDesktop from "./pages/desktop";
 import PageMobile from "./pages/mobile";
+import Modal from 'react-modal';
 import './styles/app.css';
 
 function getWindowDimentions() {
@@ -10,6 +11,8 @@ function getWindowDimentions() {
       height
   })
 }
+
+Modal.setAppElement('#yourAppElement');
 
 function App() {
   const [windowDimensions, setWindowD] = useState(getWindowDimentions());
