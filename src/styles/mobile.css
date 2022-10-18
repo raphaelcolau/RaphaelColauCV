@@ -77,11 +77,9 @@ div.bottom > .content-list {
 
 .content-list > .left {
     height: 100%;
-    width: 150vw;
+    width: var(--split-dimension);
     float: left;
-    margin-left: -100vw;
 
-    background-color: green;
     border-right: var(--border-style);
 }
 
@@ -110,3 +108,36 @@ div.bottom > .content-list {
     text-decoration: none;
     color: var(--color-main);
  }
+
+ /*
+  * 
+  * List 
+  * 
+  */
+
+ .m-project-list {
+    max-height: 55vh;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+ }
+
+.m-project-list div.p-element-m {
+    height: 100px;
+    background-color: var(--color-second);
+
+    border: var(--border-style);
+    border-right: unset;
+    margin: 0.3rem;
+    margin-right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2rem;
+}
+
+.dragzone {
+    background-color: green;
+}
