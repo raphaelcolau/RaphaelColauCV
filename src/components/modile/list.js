@@ -3,7 +3,7 @@ import Draggable from 'react-draggable';
 import Projectmodal from './modal.js';
 const projects = require('../../projects.json');
 
-//TODO Le scroll dans sur l'axe Y est cassé à cause du component Draggable
+//TODO Le scroll est réparer mais il y a des problèmes de saccades sur l'axe Y dans la liste
 
 export default class List extends React.Component {
     constructor(props) {
@@ -13,6 +13,7 @@ export default class List extends React.Component {
         }
         this.handleStop=this.handleStop.bind(this);
         this.handleDrag=this.handleDrag.bind(this);
+        this.scrollRef = React.createRef();
     }
 
     handleStop(e) {
@@ -30,6 +31,9 @@ export default class List extends React.Component {
     }
 
     handleDrag(e, ui) {
+        if ((ui.deltaY > 1) || (ui.deltaY < -1)) {
+            this.scrollRef.current.scrollTop += (ui.deltaY * -1);
+        }
         let i = 0;
 
         if (!e.path[i].id)
@@ -43,7 +47,7 @@ export default class List extends React.Component {
 
     render() {
         return(
-            <div className="m-project-list">
+            <div className="m-project-list" ref={this.scrollRef}>
                 {projects.list.map((p, index) => {
                     return(
                         <div className='dragzone' key={index}>
