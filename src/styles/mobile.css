@@ -22,7 +22,7 @@ div.mobile-display > .top {
     }
     div.mobile-display .logo {
         transform-origin: top left;
-        scale: calc(150% / calc( 768 / var(--window-width)));
+        scale: calc(1.5 / (calc( 768 / var(--window-width))));
     }
 }
 
@@ -32,7 +32,7 @@ div.mobile-display > .top {
     }
     div.mobile-display .logo {
         transform-origin: top left;
-        scale: calc(100% / calc( 768 / var(--window-width)));
+        scale: calc(1 / (calc( 768 / var(--window-width))));
     }
 }
 

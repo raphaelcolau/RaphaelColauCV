@@ -7,6 +7,7 @@ import '../styles/mobile.css';
 export default class PageMobile extends React.Component {
 
     render() {
+        console.log(this.props.dimensions.width)
         return(
             <div className="mobile-display" style={{ '--window-width': this.props.dimensions.width }}>
                 <div className="frame" />
