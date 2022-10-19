@@ -92,9 +92,6 @@ div.project-list > .list {
     margin: 6px;
     display: flex;
     flex-wrap: wrap;
-}
-
-.stack {
     padding-top: 70px;
     border-bottom: var(--color-main) solid calc( var(--line-size) / 2);
 }

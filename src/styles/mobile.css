@@ -164,3 +164,177 @@ div.bottom > .content-list {
     padding: auto;
     user-select: none;
 }
+
+.ReactModal__Content--after-open {
+    left: 50% !important;
+    transition: ease-out 300ms;
+}
+
+.ReactModal__Content--closing {
+    left: -50% !important;
+    transition: ease-out 300ms;
+}
+
+.Modal {
+    position: absolute;
+    left: -50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 160px;
+    height: 160px;
+    scale: 2;
+    transform-origin: 0 0;
+    margin-bottom: 26px;
+    margin-right: 26px;
+    overflow: hidden;
+
+    border: calc(var(--line-size) / 2) solid var(--color-main);
+    background-color: black;
+    color: var(--color-main);
+
+    z-index: 1;
+    transition: ease-out 300ms;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: ease-in 300ms;
+}
+
+.ReactModal__Overlay--after-open {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    transition: ease-in 300ms;
+}
+
+.Modal .text {
+    margin: 5px;
+    text-align: left;
+    font-size: 15px;
+
+    top: 0;
+    transform: translateY(0%) rotate(0);
+
+    transition: ease-out 200ms;
+}
+
+.Modal .only-hov {
+    opacity: 0;
+    transform: translate(-100px, 0px);
+}
+
+.ReactModal__Content--after-open .only-hov {
+    color: var(--color-main);
+    opacity: 100%;
+    transform: translate(0, 0);
+    transition: cubic-bezier(.46,.64,.42,1.18) calc(500ms * var(--order));
+}
+
+.Modal .description {
+    margin: 6px;
+    font-size: 10px;
+}
+
+.Modal .stack {
+    margin: 6px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Modal .stack {
+    padding-top: 70px;
+    border-bottom: var(--color-main) solid calc( var(--line-size) / 2);
+}
+
+.Modal span {
+    font-size: 7px;
+
+    margin: -5px -10px 0 0;
+    text-align: left;
+
+    opacity: 0;
+    transform-origin: top left;
+    transform: rotate(-45deg);
+}
+
+.Modal .stack > span:before {
+    content: "■ "
+}
+
+.ReactModal__Content--after-open span {
+    opacity: 1;
+    transition: opacity calc(900ms * var(--order-stack)) cubic-bezier(1,.27,.31,1);
+}
+
+.Modal .bottom-bar {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    width: calc(99% - 10px);
+}
+
+.bottom-bar a {
+    text-decoration: unset;
+    color: var(--color-main);
+    font-size: 13px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 15px;
+    
+    position: relative;
+}
+
+.bottom-bar a::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -1px;
+    opacity: 0;
+
+    border-left: 1px solid var(--color-main);
+    border-bottom: 1px solid var(--color-main);
+
+    
+    transition: opacity 0ms 200ms, width 200ms ease-in-out, height 200ms ease-in;
+}
+
+.bottom-bar a::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: -1px;
+    opacity: 0;
+
+    border-right: 1px solid var(--color-main);
+    border-top: 1px solid var(--color-main);
+    
+    transition: opacity 0ms 200ms, width 200ms ease-in-out, height 200ms ease-in;
+}
+
+.bottom-bar a:hover::before, a:hover::after {
+    width: calc(100% - 1px);
+    height: 15px;
+    opacity: 1;
+    transition: opacity 0ms, width 200ms ease-in-out, height 200ms ease-in;
+}

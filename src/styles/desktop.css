@@ -1,6 +1,5 @@
 .desktop-display {
     --height-top-pos: 49vh;
-    --border-style: var(--line-size) solid var(--color-main);
 
     width: 100vw;
     height: 170vh;
