@@ -1,13 +1,13 @@
 import React from 'react';
 import Modal from 'react-modal';
 
+//TODO Corriger le problème des bordures rondes
+
 Modal.setAppElement('#root');
 
 export default function Projectmodal(p) {
     const [modalIsOpen, setIsOpen] = React.useState(false);
-    // const ref = React.useRef(null);
 
-    // function openModal() {setIsOpen(true);}
     function closeModal(e) {
         const openModal = document.getElementsByClassName("ReactModal__Content--after-open");
         const openOverlay = document.getElementsByClassName("ReactModal__Overlay--after-open");
@@ -19,17 +19,12 @@ export default function Projectmodal(p) {
         }, 300);
     }
 
-    function test(e) {
-        e.contentEl.classList.add('Test')
-    }
-
     return(
         <>
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 className="Modal"
-                onAfterOpen={test}
                 overlayClassName="Overlay"
             >
                 <div>
