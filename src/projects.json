@@ -1,35 +1,36 @@
 {
     "list": [
         {
+            "name": "DynamX Software",
+            "description": "Content pack protection software for DynamX",
+            "works": ["Intégration", "Back", "Front", "Design"],
+            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
+            "url": "https://dynamx.fr",
+            "src": "https://github.com/raphaelcolau/dynamx-protection-client"
+        },
+        {
             "name": "Opasenior",
             "description": "Site de référencement de maison de retraite",
             "works": ["Intégration", "Back", "Front", "Database"],
             "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "Leaflet"],
             "url": "https://opasenior.com",
-            "src": "https://github.com"
+            "src": "https://gitlab.com/polyster20/opasenior-client"
         },
         {
             "name": "DynamX",
             "description": "Site de présentation du projet DynamX",
             "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
+            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS"],
             "url": "https://dynamx.fr",
-            "src": "https://github.com"
+            "src": "https://gitlab.com/polyster20/dynamx-web"
         },
         {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr",
-            "src": "https://github.com"
-        },
-        {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr"
+            "name": "CV",
+            "description": "The website you are currently on",
+            "works": ["Intégration", "Front", "Design"],
+            "stack": ["ReactJS", "Three.js"],
+            "url": "https://raphael.colau.fr",
+            "src": "https://github.com/raphaelcolau/RaphaelColauCV"
         },
         {
             "name": "Test",
