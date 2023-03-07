@@ -7,13 +7,13 @@ export default function SideBar() {
                     Linkedin
                 </a>
                 <a href="https://twitter.com/raphaelcolau" rel="noreferrer" target='_blank'>
-                    Github
+                    Twitter
                 </a>
             </div>
 
             <div>
                 <a href="https://github.com/raphaelcolau" rel="noreferrer" target='_blank'>
-                    Twitter
+                    Github
                 </a>
                 <a href="mailto: pro@colau.fr" rel="noreferrer" target='_blank'>
                     Email
