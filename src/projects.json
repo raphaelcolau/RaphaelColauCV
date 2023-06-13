@@ -33,60 +33,12 @@
             "src": "https://github.com/raphaelcolau/RaphaelColauCV"
         },
         {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr"
-        },
-        {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr"
-        },
-        {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr"
-        },
-        {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr"
-        },
-        {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr"
-        },
-        {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr"
-        },
-        {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr"
-        },
-        {
-            "name": "Test",
-            "description": "Lorem ipsum",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://google.fr"
+            "name": "Proprius",
+            "description": "Développement d'un générateur de site pour les agences immobilières",
+            "works": ["Intégration", "Front", "Design", "Lead Front"],
+            "stack": ["ReactJS", "NestJS", "Material.Ui", "NodeJS", "prisma"],
+            "url": "https://proprius.fr",
+            "src": "https://github.com/Proprius-fr"
         }
     ]
 }
