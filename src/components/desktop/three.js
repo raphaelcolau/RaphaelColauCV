@@ -8,22 +8,17 @@ import { HoverContext } from '../context/hoverlist';
 function AnimatedText(props) {
     const { elementHovered } = useContext(HoverContext);
     const text = elementHovered;
-    const [isHovered, setIsHovered] = useState(false);
     const defaultDuration = 50000;
     const [maxY, minY] = [4, -5.5];
 
     const [position, setPosition] = useState([
         Math.random() * 8 - 4, // [-4, 4]
-        Math.random() * 9.5 - 5.5 , // [-5.5, 4]
+        Math.random() * 9.5 - 5.5, // [-5.5, 4]
         Math.random() * -0.5 // [-0.5, 0]
     ]);
 
     const speed = (maxY - (minY)) / defaultDuration;
     const remainingDuration = Math.abs((position[1] - minY) / speed);
-
-    const handleHover = () => {
-        setIsHovered(!isHovered);
-    };
 
     const animationProps = useSpring({
         from: {positionY: maxY},
@@ -39,30 +34,20 @@ function AnimatedText(props) {
         }
     })
 
-    const rotationProps = useSpring({
-        from: { rotation: [0, 0, -Math.PI / 2] },
-        to: { rotation: isHovered ? [0, 0, 0] : [0, 0, -Math.PI / 2]  },
-        config: { duration: 500 },
-        onChange: ({ value }) => {
-            const [x, y, z] = value.rotation;
-        },
-    });
-
-    if (props.index === 0 || isHovered) {
-        console.log(rotationProps.rotation.get())
-    }
+    // const textArray = text.split('');
 
     return (
         <animated.group
             key={props.index}
             position-y={animationProps.positionY}
-            onPointerEnter={handleHover}
-            onPointerLeave={handleHover}
+            onClick={() => {
+                console.log('position: ', [position[0], animationProps.positionY.get(), position[2]]);
+            }}
         >
             <Text
                 position={position}
                 color='white'
-                rotation={rotationProps.rotation.get()}
+                rotation={[0, 0, -Math.PI / 2]}
                 font={Font}
                 fontSize={0.2}
                 fontWeight='bold'
@@ -74,7 +59,7 @@ function AnimatedText(props) {
 }
 
 export default function Three() {
-    const textQuantity = 50;
+    const textQuantity = 45;
 
     return (
         <div className='three-container'>
