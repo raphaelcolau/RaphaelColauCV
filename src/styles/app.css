@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
 .App {
     color: var(--color-main);
 }
