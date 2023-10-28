@@ -34,8 +34,6 @@ function AnimatedText(props) {
         }
     })
 
-    // const textArray = text.split('');
-
     return (
         <animated.group
             key={props.index}
