@@ -4,9 +4,9 @@ import Linkbar from '../components/modile/linkbar';
 import List from '../components/modile/list';
 import '../styles/mobile.css';
 
-export default function PageMobile() {
+export default function PageMobile(props) {
     return(
-        <div className="mobile-display" style={{ '--window-width': this.props.dimensions.width }}>
+        <div className="mobile-display" style={{ '--window-width': props.dimensions.width }}>
             <div className="frame" />
 
             <div className='top'>
