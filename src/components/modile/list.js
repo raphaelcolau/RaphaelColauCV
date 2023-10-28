@@ -3,8 +3,6 @@ import Draggable from 'react-draggable';
 import Projectmodal from './modal.js';
 const projects = require('../../projects.json');
 
-//TODO Le scroll est réparer mais il y a des problèmes de saccades sur l'axe Y dans la liste
-
 export default class List extends React.Component {
     constructor(props) {
         super(props);
