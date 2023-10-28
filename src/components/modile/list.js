@@ -16,13 +16,9 @@ export default class List extends React.Component {
         this.scrollRef = React.createRef();
     }
 
-    handleStop(e) {
+    handleStop(e, ui) {
         setTimeout(() => {
-            let i = 0;
-
-            if (!e.path[i].id)
-                i++;
-            const index = Number(e.path[i].id);
+            const index = Number(ui.node.id);
             var { positionX } = this.state;
     
             positionX[index] = 0; 
@@ -34,11 +30,8 @@ export default class List extends React.Component {
         if ((ui.deltaY > 1) || (ui.deltaY < -1)) {
             this.scrollRef.current.scrollTop += (ui.deltaY * -1);
         }
-        let i = 0;
 
-        if (!e.path[i].id)
-            i++;
-        const index = Number(e.path[i].id);
+        const index = Number(ui.node.id);
         var { positionX } = this.state;
 
         positionX[index] += ui.deltaX; 
@@ -58,7 +51,8 @@ export default class List extends React.Component {
                                 bounds={{left: 0, right: 100}}
                                 position={{x: this.state.positionX[index], y: 0}}
                                 onStop={this.handleStop}
-                                onDrag={this.handleDrag}>
+                                onDrag={this.handleDrag}
+                            >
                                 
                                 <div className='p-element-m' id={`${index}`}>
                                     <div>
