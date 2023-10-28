@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
 
 //TODO Corriger le problème des bordures rondes
@@ -6,7 +6,7 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 export default function Projectmodal(p) {
-    const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [modalIsOpen, setIsOpen] = useState(false);
 
     function closeModal(e) {
         const openModal = document.getElementsByClassName("ReactModal__Content--after-open");
