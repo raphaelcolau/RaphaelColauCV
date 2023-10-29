@@ -9,11 +9,11 @@ function AnimatedText(props) {
     const { elementHovered } = useContext(HoverContext);
     const text = elementHovered;
     const defaultDuration = 50000;
-    const [maxY, minY] = [4, -5.5];
+    const [maxY, minY] = [4, -6];
 
     const [position, setPosition] = useState([
         Math.random() * 8 - 4, // [-4, 4]
-        Math.random() * 9.5 - 5.5, // [-5.5, 4]
+        Math.random() * 10 - 6, // [-6, 4]
         Math.random() * -0.5 // [-0.5, 0]
     ]);
 
