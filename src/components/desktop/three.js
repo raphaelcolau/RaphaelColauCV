@@ -8,7 +8,7 @@ import { HoverContext } from '../context/hoverlist';
 function AnimatedText(props) {
     const { elementHovered } = useContext(HoverContext);
     const text = elementHovered;
-    const defaultDuration = 40000;
+    const defaultDuration = Math.random() * 4000 + 37000;
     const [maxY, minY] = [4, -6];
 
     const [position, setPosition] = useState([
