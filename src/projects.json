@@ -52,7 +52,7 @@
             "name": "Truc.zip",
             "description": "File hosting",
             "works": ["Front", "Back", "Weekend project"],
-            "stack": ["ReactJS", "Express.JS", "Three.JS"],
+            "stack": ["ReactJS", "Express.JS", "Three.JS", "Redux"],
             "url": "https://truc.zip",
             "src": "https://github.com/raphaelcolau/truc.zip"
         }
