@@ -9,11 +9,11 @@
             "src": "https://github.com/raphaelcolau/NetRiv-Client"
         },
         {
-            "name": "DynamX Software",
-            "description": "Content pack protection software for DynamX",
-            "works": ["Intégration", "Back", "Front", "Design"],
-            "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS", "ElectronJS"],
-            "url": "https://dynamx.fr",
+            "name": "Minecraft's Character creator",
+            "description": "Créateur de personne en 3D pour des projects Minecraft intégré dans le jeu via JCEF",
+            "works": ["Intégration", "Front", "Design"],
+            "stack": ["ReactJS", "Three.JS"],
+            "url": "https://character.demo.colau.fr",
             "src": "https://github.com/raphaelcolau/dynamx-protection-client"
         },
         {
@@ -55,6 +55,13 @@
             "stack": ["ReactJS", "Express.JS", "Three.JS", "Redux"],
             "url": "https://truc.zip",
             "src": "https://github.com/raphaelcolau/truc.zip"
+        },
+        {
+            "name": "Raise!",
+            "description": "Application mobile pour la pratique du sport",
+            "works": ["Intégration", "Front", "Mobile"],
+            "stack": ["React-Native", "Java Sprint Boot"],
+            "src": "https://github.com/raphaelcolau/Raise-frontend"
         }
     ]
 }

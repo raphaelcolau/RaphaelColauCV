@@ -11,7 +11,7 @@ export default function Linkbar() {
             <a href="https://twitter.com/raphaelcolau" rel="noreferrer" target='_blank'>
                 Twitter
             </a>
-            <a href="mailto: pro@colau.fr" rel="noreferrer" target='_blank'>
+            <a href="mailto: raphael@colau.fr" rel="noreferrer" target='_blank'>
                 Email
             </a>
         </div>

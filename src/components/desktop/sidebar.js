@@ -15,7 +15,7 @@ export default function SideBar() {
                 <a href="https://github.com/raphaelcolau" rel="noreferrer" target='_blank'>
                     Github
                 </a>
-                <a href="mailto: pro@colau.fr" rel="noreferrer" target='_blank'>
+                <a href="mailto: raphael@colau.fr" rel="noreferrer" target='_blank'>
                     Email
                 </a>
             </div>
