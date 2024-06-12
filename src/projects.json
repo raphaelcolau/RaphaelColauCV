@@ -37,14 +37,14 @@
             "description": "Plateforme permettant de trouver des missions de remplacement dans le secteur de la santé.",
             "works": ["Back", "Front", "Refonte"],
             "stack": ["NextJS", "NestJS", "PostgreSQL"],
-            "url": "https://gula-prat.fr/",
+            "url": "https://gula-prat.fr/"
         },
 	{
             "name": "Gula Établissement de Santé",
             "description": "Plateforme permettant de trouver praticiens pour des vacations.",
             "works": ["Back", "Front", "Refonte"],
             "stack": ["NextJS", "NestJS", "PostgreSQL"],
-            "url": "https://gula-eds.fr/",
+            "url": "https://gula-eds.fr/"
         },
         {
             "name": "CV",
