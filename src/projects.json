@@ -29,8 +29,22 @@
             "description": "Site de présentation du projet DynamX",
             "works": ["Intégration", "Back", "Front", "Design"],
             "stack": ["ReactJS", "ExpressJS", "MongoDB", "NodeJS"],
-            "url": "https://dynamx.fr",
+            "url": "https://v2.dynamx.fr",
             "src": "https://gitlab.com/polyster20/dynamx-web"
+        },
+	{
+            "name": "Gula Praticiens",
+            "description": "Plateforme permettant de trouver des missions de remplacement dans le secteur de la santé.",
+            "works": ["Back", "Front", "Refonte"],
+            "stack": ["NextJS", "NestJS", "PostgreSQL"],
+            "url": "https://gula-prat.fr/",
+        },
+	{
+            "name": "Gula Établissement de Santé",
+            "description": "Plateforme permettant de trouver praticiens pour des vacations.",
+            "works": ["Back", "Front", "Refonte"],
+            "stack": ["NextJS", "NestJS", "PostgreSQL"],
+            "url": "https://gula-eds.fr/",
         },
         {
             "name": "CV",
