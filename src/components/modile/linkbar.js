@@ -2,7 +2,7 @@
 export default function Linkbar() {
     return(
         <div className="link">
-            <a href="https://www.linkedin.com/in/raphael-colau-2211b91ba/" rel="noreferrer" target='_blank'>
+            <a href="https://www.linkedin.com/in/raphael-colau/" rel="noreferrer" target='_blank'>
                 Linkedin
             </a>
             <a href="https://github.com/raphaelcolau" rel="noreferrer" target='_blank'>

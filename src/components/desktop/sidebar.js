@@ -3,7 +3,7 @@ export default function SideBar() {
         <div className="sidebar">
 
             <div>
-                <a href="https://www.linkedin.com/in/raphael-colau-2211b91ba/" rel="noreferrer" target='_blank'>
+                <a href="https://www.linkedin.com/in/raphael-colau/" rel="noreferrer" target='_blank'>
                     Linkedin
                 </a>
                 <a href="https://twitter.com/raphaelcolau" rel="noreferrer" target='_blank'>
