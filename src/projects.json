@@ -47,6 +47,13 @@
             "url": "https://gula-eds.fr/"
         },
         {
+            "name": "Serrurrerie Daman",
+            "description": "Site de présentation de l'entreprise de serrurerie Daman",
+            "works": ["Intégration", "Front", "Design"],
+            "stack": ["ReactJS", "Material.Ui"],
+            "url": "https://daman.demo.colau.fr"
+        },
+        {
             "name": "CV",
             "description": "The website you are currently on",
             "works": ["Intégration", "Front", "Design"],
