@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Modal from 'react-modal';
 
 //TODO Corriger le problème des bordures rondes
@@ -7,25 +7,55 @@ Modal.setAppElement('#root');
 
 export default function Projectmodal(p) {
     const [modalIsOpen, setIsOpen] = useState(false);
+    const contentRef = useRef(null);
+    const overlayRef = useRef(null);
+    const closeDelay = 300;
 
-    function closeModal(e) {
-        const openModal = document.getElementsByClassName("ReactModal__Content--after-open");
-        const openOverlay = document.getElementsByClassName("ReactModal__Overlay--after-open");
+    const handleAfterOpen = () => {
+        const contentNode = contentRef.current;
+        const overlayNode = overlayRef.current;
 
-        openModal[0].classList.remove("ReactModal__Content--after-open")
-        openOverlay[0].classList.remove("ReactModal__Overlay--after-open")
+        if (contentNode) {
+            contentNode.classList.remove("ReactModal__Content--closing");
+        }
+
+        if (overlayNode) {
+            overlayNode.classList.add("ReactModal__Overlay--after-open");
+        }
+    };
+
+    const handleRequestClose = () => {
+        const contentNode = contentRef.current;
+        const overlayNode = overlayRef.current;
+
+        if (!contentNode && !overlayNode) {
+            setIsOpen(false);
+            return;
+        }
+
+        if (contentNode) {
+            contentNode.classList.add("ReactModal__Content--closing");
+        }
+
+        if (overlayNode) {
+            overlayNode.classList.remove("ReactModal__Overlay--after-open");
+        }
+
         setTimeout(() => {
             setIsOpen(false);
-        }, 300);
-    }
+        }, closeDelay);
+    };
 
     return(
         <>
             <Modal
                 isOpen={modalIsOpen}
-                onRequestClose={closeModal}
+                onAfterOpen={handleAfterOpen}
+                onRequestClose={handleRequestClose}
                 className="Modal"
                 overlayClassName="Overlay"
+                contentRef={(node) => { contentRef.current = node; }}
+                overlayRef={(node) => { overlayRef.current = node; }}
             >
                 <div>
                     <div className="text"> {p.project.name} </div>
