@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/logo.css';
 
 export default function Logo() {
     const [animate, setAnimate] = useState('');
-    const [hasBeenAnimate, setBeenAnimate] = useState(false);
 
-    setTimeout(() => {
-        if (!hasBeenAnimate) {
+    useEffect(() => {
+        let resetTimeout;
+        const animationTimeout = setTimeout(() => {
             setAnimate('shake');
-            setTimeout(() => {
+            resetTimeout = setTimeout(() => {
                 setAnimate('');
             }, 1000);
-        }
-        setBeenAnimate(true);
-    }, 1000);
+        }, 1000);
 
-    return(
+        return () => {
+            clearTimeout(animationTimeout);
+            clearTimeout(resetTimeout);
+        };
+    }, []);
+
+    return (
         <div className="logo">
             <div className='left' style={{ '--order': '100ms'}}></div>
             <div className={'top ' + animate}>
@@ -35,5 +39,5 @@ export default function Logo() {
                 <span style={{ '--order': '500ms'}}>U</span>
             </div>
         </div>
-    )
+    );
 }
