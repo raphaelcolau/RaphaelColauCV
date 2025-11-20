@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../components/logo';
-import Linkbar from '../components/modile/linkbar';
-import List from '../components/modile/list';
+import Linkbar from '../components/mobile/linkbar';
+import List from '../components/mobile/list';
 import '../styles/mobile.css';
 import ProfileIntro from '../components/profileIntro';
 
