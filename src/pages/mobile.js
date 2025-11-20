@@ -3,6 +3,7 @@ import Logo from '../components/logo';
 import Linkbar from '../components/modile/linkbar';
 import List from '../components/modile/list';
 import '../styles/mobile.css';
+import ProfileIntro from '../components/profileIntro';
 
 export default function PageMobile(props) {
     return(
@@ -18,13 +19,7 @@ export default function PageMobile(props) {
                 </div>
 
                 <div className='description'>
-                    <p className='title'>Freelance Developer</p>
-                    <p>Hello, I'm Raphaël</p>
-                    <p>I'm a Full Stack Developer from Paris.</p>
-                    <p>I work primarily with <code>Javascript</code> and I specialize in the <code>MERN</code> stack.</p>
-                    <p>I also enjoy design, and Adobe XD holds no secrets for me.</p>
-                    <p>I am currently a freelance developer.</p>
-                    <p>Formerly a developer at <code>Opasenior</code></p>
+                    <ProfileIntro />
                 </div>
 
             </div>
